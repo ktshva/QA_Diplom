@@ -20,7 +20,7 @@
 ### PostgreSQL
   1. _Клонировать репозиторий командой_ git clone https://github.com/ktshva/QA_Diplom.git
   2. _Открыть проект в_ **IntelliJ IDEA**
-  3. _Запуск сервиса Docker Desktop
+  3. _Запуск сервиса_ Docker Desktop
   4. _Запуск docker-контейнера:_ из директории с файлом ```docker-compose.yml``` запустить команду ```docker-compose up```
   5. _Запуск приложения командой:_ из директрии с файлом ```application.properties``` запустить команду ```java -jar artifacts/aqa-shop.jar --spring.datasource.url=jdbc:postgresql://localhost:5432/app```
   6. _Проверить работу приложения в браузере:_ открыть URL http://localhost:8080/
