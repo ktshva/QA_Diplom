@@ -1,1 +1,0 @@
-{"total":2,"items":[{"uid":"7d7d4e6661165007a8f9de3084c38bb8","name":"ru.netology.test.BuyTest","statistic":{"failed":3,"broken":0,"skipped":0,"passed":8,"unknown":0,"total":11}},{"uid":"36cf9045cc279fe96b72becc5c1733d5","name":"ru.netology.test.CreditTest","statistic":{"failed":3,"broken":0,"skipped":0,"passed":8,"unknown":0,"total":11}}]}
