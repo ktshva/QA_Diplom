@@ -2,6 +2,7 @@ package ru.netology.data;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 import lombok.SneakyThrows;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
@@ -11,8 +12,9 @@ public class DbDataHelper {
     private static QueryRunner runner = new QueryRunner();
 
     @SneakyThrows
-    public static Connection getConnect() {
-        var conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "app", "pass");
+    public static Connection getConnect() throws SQLException {
+        var dburl = System.getProperty("db.url");
+        var conn = DriverManager.getConnection(dburl, "app", "pass");
         return (conn);
     }
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.test.CreditTest" tests="11" skipped="0" failures="3" errors="0" timestamp="2024-04-22T14:05:41" hostname="DESKTOP-P6B4130" time="43.694">
+<testsuite name="ru.netology.test.CreditTest" tests="11" skipped="0" failures="3" errors="0" timestamp="2024-05-01T09:13:50" hostname="DESKTOP-P6B4130" time="65.215">
   <properties/>
-  <testcase name="shouldApprovedOnCredit()" classname="ru.netology.test.CreditTest" time="10.816"/>
-  <testcase name="shouldInvalidMonth()" classname="ru.netology.test.CreditTest" time="0.749"/>
-  <testcase name="shouldInvalidOwner()" classname="ru.netology.test.CreditTest" time="5.118">
-    <failure message="Element not found {by text: Неверный формат}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794758365.3.png&#13;&#10;Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794758365.3.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверный формат}
+  <testcase name="shouldApprovedOnCredit()" classname="ru.netology.test.CreditTest" time="20.942"/>
+  <testcase name="shouldInvalidMonth()" classname="ru.netology.test.CreditTest" time="1.242"/>
+  <testcase name="shouldInvalidOwner()" classname="ru.netology.test.CreditTest" time="5.908">
+    <failure message="Element not found {by text: Неверный формат}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554858293.0.png&#13;&#10;Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554858293.0.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверный формат}
 Expected: visible
-Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794758365.3.png
-Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794758365.3.html
+Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554858293.0.png
+Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554858293.0.html
 Timeout: 4 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -20,9 +20,9 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.commands.Commands.execute(Commands.java:163)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
-	at app//com.sun.proxy.$Proxy18.shouldBe(Unknown Source)
+	at app//com.sun.proxy.$Proxy19.shouldBe(Unknown Source)
 	at app//ru.netology.page.CreditGate.wrongFormat(CreditGate.java:48)
-	at app//ru.netology.test.CreditTest.shouldInvalidOwner(CreditTest.java:136)
+	at app//ru.netology.test.CreditTest.shouldInvalidOwner(CreditTest.java:126)
 	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.20.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -114,15 +114,15 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Неверный формат&quot;]/parent::*&quot;}
-  (Session info: chrome=124.0.6367.60)
+  (Session info: chrome=124.0.6367.93)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4dc532a13cca5274d0da5fcfb7770268, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [07cba0f74d34044f68ff4dd8218abf12, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Неверный формат&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: C:\Users\arseniy\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61041}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61041/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4dc532a13cca5274d0da5fcfb7770268
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.93, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\arseniy\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52714}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52714/devtoo..., se:cdpVersion: 124.0.6367.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07cba0f74d34044f68ff4dd8218abf12
 	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
 	at java.base@11.0.20.1/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base@11.0.20.1/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
@@ -145,13 +145,13 @@ Session ID: 4dc532a13cca5274d0da5fcfb7770268
 	... 98 more
 </failure>
   </testcase>
-  <testcase name="shouldYearMore5()" classname="ru.netology.test.CreditTest" time="0.766"/>
-  <testcase name="shouldInvalidYear()" classname="ru.netology.test.CreditTest" time="0.736"/>
-  <testcase name="shouldNameOwnerRu()" classname="ru.netology.test.CreditTest" time="5.136">
-    <failure message="Element not found {by text: Неверный формат}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794764968.4.png&#13;&#10;Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794764968.4.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверный формат}
+  <testcase name="shouldYearMore5()" classname="ru.netology.test.CreditTest" time="1.267"/>
+  <testcase name="shouldInvalidYear()" classname="ru.netology.test.CreditTest" time="1.195"/>
+  <testcase name="shouldNameOwnerRu()" classname="ru.netology.test.CreditTest" time="5.741">
+    <failure message="Element not found {by text: Неверный формат}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554866605.1.png&#13;&#10;Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554866605.1.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверный формат}
 Expected: visible
-Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794764968.4.png
-Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794764968.4.html
+Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554866605.1.png
+Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554866605.1.html
 Timeout: 4 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -164,9 +164,9 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.commands.Commands.execute(Commands.java:163)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
-	at app//com.sun.proxy.$Proxy18.shouldBe(Unknown Source)
+	at app//com.sun.proxy.$Proxy19.shouldBe(Unknown Source)
 	at app//ru.netology.page.CreditGate.wrongFormat(CreditGate.java:48)
-	at app//ru.netology.test.CreditTest.shouldNameOwnerRu(CreditTest.java:147)
+	at app//ru.netology.test.CreditTest.shouldNameOwnerRu(CreditTest.java:136)
 	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.20.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -258,15 +258,15 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Неверный формат&quot;]/parent::*&quot;}
-  (Session info: chrome=124.0.6367.60)
+  (Session info: chrome=124.0.6367.93)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4dc532a13cca5274d0da5fcfb7770268, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [07cba0f74d34044f68ff4dd8218abf12, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Неверный формат&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: C:\Users\arseniy\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61041}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61041/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4dc532a13cca5274d0da5fcfb7770268
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.93, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\arseniy\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52714}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52714/devtoo..., se:cdpVersion: 124.0.6367.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07cba0f74d34044f68ff4dd8218abf12
 	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
 	at java.base@11.0.20.1/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base@11.0.20.1/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
@@ -289,16 +289,16 @@ Session ID: 4dc532a13cca5274d0da5fcfb7770268
 	... 98 more
 </failure>
   </testcase>
-  <testcase name="shouldInvalidCVC()" classname="ru.netology.test.CreditTest" time="0.745"/>
-  <testcase name="shouldEmptyFields()" classname="ru.netology.test.CreditTest" time="0.537"/>
-  <testcase name="shouldInvalidCardNumber()" classname="ru.netology.test.CreditTest" time="0.737"/>
-  <testcase name="shouldValidCardNumberNotInDB()" classname="ru.netology.test.CreditTest" time="2.313"/>
-  <testcase name="shouldDeclinedOnCredit()" classname="ru.netology.test.CreditTest" time="16.027">
-    <failure message="Element should be visible {.notification_status_error}&#13;&#10;Element: '&lt;div class=&quot;notification notification_status_error notification_has-closer notification_stick-to_right notification_theme_alfa-on-white&quot; displayed:false&gt;&lt;/div&gt;'&#13;&#10;Actual value: hidden&#13;&#10;Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794785374.5.png&#13;&#10;Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794785374.5.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be visible {.notification_status_error}
+  <testcase name="shouldInvalidCVC()" classname="ru.netology.test.CreditTest" time="1.258"/>
+  <testcase name="shouldEmptyFields()" classname="ru.netology.test.CreditTest" time="1.035"/>
+  <testcase name="shouldInvalidCardNumber()" classname="ru.netology.test.CreditTest" time="1.157"/>
+  <testcase name="shouldValidCardNumberNotInDB()" classname="ru.netology.test.CreditTest" time="8.812"/>
+  <testcase name="shouldDeclinedOnCredit()" classname="ru.netology.test.CreditTest" time="16.627">
+    <failure message="Element should be visible {.notification_status_error}&#13;&#10;Element: '&lt;div class=&quot;notification notification_status_error notification_has-closer notification_stick-to_right notification_theme_alfa-on-white&quot; displayed:false&gt;&lt;/div&gt;'&#13;&#10;Actual value: hidden&#13;&#10;Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554895468.2.png&#13;&#10;Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554895468.2.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be visible {.notification_status_error}
 Element: '&lt;div class=&quot;notification notification_status_error notification_has-closer notification_stick-to_right notification_theme_alfa-on-white&quot; displayed:false&gt;&lt;/div&gt;'
 Actual value: hidden
-Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794785374.5.png
-Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1713794785374.5.html
+Screenshot: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554895468.2.png
+Page source: file:/C:/Users/arseniy/Desktop/Gradle%20projects/QA_Diplom/build/reports/tests/1714554895468.2.html
 Timeout: 15 s.
 	at app//com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:149)
 	at app//com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:127)
@@ -308,9 +308,9 @@ Timeout: 15 s.
 	at app//com.codeborne.selenide.commands.Commands.execute(Commands.java:163)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
-	at app//com.sun.proxy.$Proxy18.shouldBe(Unknown Source)
+	at app//com.sun.proxy.$Proxy19.shouldBe(Unknown Source)
 	at app//ru.netology.page.CreditGate.errorNotification(CreditGate.java:44)
-	at app//ru.netology.test.CreditTest.shouldDeclinedOnCredit(CreditTest.java:57)
+	at app//ru.netology.test.CreditTest.shouldDeclinedOnCredit(CreditTest.java:54)
 	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.20.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -403,5 +403,9 @@ Timeout: 15 s.
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[мая 01, 2024 4:13:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 124
+мая 01, 2024 4:13:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 124.0.6367.93. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
 </testsuite>

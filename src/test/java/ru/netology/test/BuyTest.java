@@ -2,10 +2,7 @@ package ru.netology.test;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import ru.netology.data.DataHelper;
 import ru.netology.data.DbDataHelper;
 import ru.netology.page.BuyGate;
@@ -16,11 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class BuyTest {
-    @AfterAll
-    static void clearTables() {
+    @AfterEach
+    void clearTables() {
         DbDataHelper.clearTables();
     }
 
+    @AfterAll
     static void tearDownAll() {
         SelenideLogger.removeListener("allure");
     }
@@ -32,15 +30,15 @@ public class BuyTest {
 
     @BeforeEach
     void setup() {
-        open("http://localhost:8080");
+        var weburl = System.getProperty("web.url");
+        open(weburl);
     }
 
     @Test
     public void shouldApprovedOnCredit() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getApprovedCardInfo();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.successfulNotification();
@@ -50,9 +48,8 @@ public class BuyTest {
     @Test
     public void shouldDeclinedOnCredit() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getDeclinedCardInfo();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.errorNotification();
@@ -62,9 +59,8 @@ public class BuyTest {
     @Test
     public void shouldEmptyFields() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getEmptyCardInfo();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.wrongFormat();
@@ -74,9 +70,8 @@ public class BuyTest {
     @Test
     public void shouldInvalidCardNumber() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getInvalidCardNumber();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.wrongFormat();
@@ -85,9 +80,8 @@ public class BuyTest {
     @Test
     public void shouldValidCardNumberNotInDB() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getValidCardNumberNotInDB();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.errorNotification();
@@ -96,9 +90,8 @@ public class BuyTest {
     @Test
     public void shouldInvalidMonth() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getInvalidMonth();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.cardDataIncorrect();
@@ -107,9 +100,8 @@ public class BuyTest {
     @Test
     public void shouldInvalidYear() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getInvalidYear();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.cardDataExpired();
@@ -118,9 +110,8 @@ public class BuyTest {
     @Test
     public void shouldYearMore5() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getYearMore5();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.cardDataIncorrect();
@@ -129,9 +120,8 @@ public class BuyTest {
     @Test
     public void shouldInvalidOwner() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getInvalidOwner();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.wrongFormat();
@@ -140,9 +130,8 @@ public class BuyTest {
     @Test
     public void shouldNameOwnerRu() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getNameOwnerRu();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.wrongFormat();
@@ -151,9 +140,8 @@ public class BuyTest {
     @Test
     public void shouldInvalidCVC() {
         var mainPage = new MainPage();
-        var buyGate = new BuyGate();
+        var buyGate = mainPage.goToBuyPage();
         var cardInfo = DataHelper.getInvalidCVC();
-        mainPage.goToBuyPage();
         buyGate.heading();
         buyGate.inputData(cardInfo);
         buyGate.wrongFormat();
